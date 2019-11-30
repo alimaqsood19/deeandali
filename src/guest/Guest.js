@@ -14,6 +14,10 @@ class Guest extends Component {
     this.props.fetchGuests();
   };
 
+  function() {
+    console.log('im crazy');
+  }
+
   render() {
     if (this.props.isLoading) {
       return <div>...Loading</div>;
@@ -38,7 +42,4 @@ const mapDispatchToProps = dispatch => ({
   fetchGuests: () => dispatch(fetchGuests())
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Fortnite);
+export default connect(mapStateToProps, mapDispatchToProps)(Fortnite);
